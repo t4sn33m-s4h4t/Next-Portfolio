@@ -2,6 +2,9 @@
 
 This is a full-stack portfolio website built using Next.js. The website showcases various sections including Home, About, Projects, and Contact. It also includes an admin panel for managing the content dynamically.
 
+
+<img src="https://github.com/t4sn33m-s4h4t/Next-Portfolio/blob/main/ss.png" />
+
 ## Live Link
 
 Check out the live version of the portfolio [here](https://tasneem-jet.vercel.app/).
