@@ -2,11 +2,7 @@ export default function AboutMe() {
   return (
     <section id="about" className="py-12 mt-16 px-6 md:px-12 lg:px-16 bg-gray-50 text-gray-800">
       <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-      <h1 className="leading-[70px] mb-12 text-3xl lg:text-4xl xl:text-5xl font-medium text-center">About <span className="text-green-500">Me</span></h1>
-=======
       <h1 className="leading-[70px] mb-12 text-3xl lg:text-4xl xl:text-5xl font-medium text-center">About <span className="text-green-500 stylish">Me</span></h1>
->>>>>>> 126e597 (Shanged some styles and added certificates)
         <div className="space-y-6 max-w-6xl mx-auto text-left">
           <p className="text-xl leading-relaxed">
             I'm Tasneem Sahat, a web developer with a focus on <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, <b>React</b> and <b>NextJs</b> . 

@@ -2,14 +2,6 @@
 import { usePathname } from "next/navigation";
 import Navbar from "../navbar";
 import Footer from "../footer";
-<<<<<<< HEAD
-
-export default function CommonLayout({ children }) {
-  const pathName = usePathname();
-  return (
-    <>
-      {pathName !== "/admin" ? <Navbar /> : null}
-=======
 import ProjectNavbar from "../projectNavbar.jsx";
 
 export default function CommonLayout({ children }) {
@@ -29,7 +21,6 @@ export default function CommonLayout({ children }) {
   return (
     <>
       {isProjectDetailPage ? <ProjectNavbar /> : <Navbar />}
->>>>>>> 126e597 (Shanged some styles and added certificates)
       {children}
       <Footer />
     </>

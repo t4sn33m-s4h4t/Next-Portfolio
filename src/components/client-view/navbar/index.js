@@ -10,10 +10,7 @@ const menuItems = [
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
   { id: "project", label: "Projects" },
-<<<<<<< HEAD
-=======
   { id: "certificate", label: "Certificates" },
->>>>>>> 126e597 (Shanged some styles and added certificates)
   { id: "contact", label: "Contact" },
 ];
 

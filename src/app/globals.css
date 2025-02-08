@@ -166,14 +166,10 @@ circle {
   background-color: rgba(47, 171, 115, 1) !important;
 }
 
-<<<<<<< HEAD
-=======
 @media (min-width: 768px) { 
   .swiper-slide {
     height: 70% !important;
   }
 }
->>>>>>> 126e597 (Shanged some styles and added certificates)
 
-}
 

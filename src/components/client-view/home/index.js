@@ -96,11 +96,7 @@ export default function ClientHomeView({ data }) {
                   .map((item, index) => (
                     <span
                       className={`${index === 1
-<<<<<<< HEAD
-                        ? "text-green-main"
-=======
                         ? "text-green-main stylish"
->>>>>>> 126e597 (Shanged some styles and added certificates)
                         : "text-[#000]"
                         }`}
                     >
@@ -116,11 +112,7 @@ export default function ClientHomeView({ data }) {
                   .map((item, index) => (
                     <span
                       className={`${index === 1
-<<<<<<< HEAD
-                        ? "text-green-main"
-=======
                         ? "text-green-main stylish"
->>>>>>> 126e597 (Shanged some styles and added certificates)
                         : "text-[#000]"
                         }`}
                     >
