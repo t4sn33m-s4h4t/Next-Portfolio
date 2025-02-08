@@ -4,14 +4,12 @@
 @tailwind base;
 @tailwind components;
 
-<<<<<<< HEAD
 html {
   font-family: "Rubik", sans-serif;
-=======
+}
 
 .stylish{
   font-style: italic;
->>>>>>> 126e597 (Shanged some styles and added certificates)
 }
 body {
   background: bg-white-500
@@ -19,7 +17,6 @@ body {
 p {
   color:  #000000
 }
-
 .animation-hover:after {
   background: none repeat scroll 0 0 transparent;
   content: "";
@@ -178,5 +175,5 @@ circle {
 }
 >>>>>>> 126e597 (Shanged some styles and added certificates)
 
-
+}
 
