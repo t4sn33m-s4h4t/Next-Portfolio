@@ -62,12 +62,20 @@ export default function ClientContactView() {
 
 
   return (
+<<<<<<< HEAD
     <div className="max-w-screen-xl pt-20 pb-2 px-6 sm:px-8 lg:px-16 mx-auto" id="contact">
+=======
+    <div className="max-w-screen-xl pt-16 pb-2 px-6 sm:px-8 lg:px-16 mx-auto" id="contact">
+>>>>>>> 126e597 (Shanged some styles and added certificates)
       <AnimationWrapper className={"py-6"}>
         <div className="flex flex-col justify-center items-center row-start-2 sm:row-start-1">
           <h1 className="leading-[70px] mb-4 text-3xl lg:text-4xl xl:text-5xl font-medium">
             {"Contact Me".split(" ").map((item, index) => (
+<<<<<<< HEAD
               <span className={`${index === 1 ? "text-green-main" : "text-[#000]"}`}>{item} </span>
+=======
+              <span className={`${index === 1 ? "text-green-main stylish" : "text-[#000]"}`}>{item} </span>
+>>>>>>> 126e597 (Shanged some styles and added certificates)
             ))}
           </h1>
         </div>

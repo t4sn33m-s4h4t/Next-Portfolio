@@ -1,4 +1,8 @@
 import ClientAboutView from "@/components/client-view/about";
+<<<<<<< HEAD
+=======
+import Certificates from "@/components/client-view/certificates"; 
+>>>>>>> 126e597 (Shanged some styles and added certificates)
 import ClientContactView from "@/components/client-view/contact";
 import ClientHomeView from "@/components/client-view/home";
 import ClientProjectView from "@/components/client-view/project";
@@ -39,6 +43,10 @@ export default async function Home() {
       />
       
       <ClientProjectView data={projectSectionData} />
+<<<<<<< HEAD
+=======
+      <Certificates />
+>>>>>>> 126e597 (Shanged some styles and added certificates)
       <ClientContactView />
     </div>
   );

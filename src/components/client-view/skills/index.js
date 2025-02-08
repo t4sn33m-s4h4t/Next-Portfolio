@@ -90,7 +90,11 @@ export default function ClientSkillsView({ data }) {
           <h1 className="leading-[70px] mb-4 text-3xl lg:text-4xl xl:text-5xl font-medium text-center md:text-left">
             {headingText?.split(" ").map((item, index) => (
               <span
+<<<<<<< HEAD
                 className={`${index === 1 ? "text-green-main" : "text-[#000]"}`}
+=======
+                className={`${index === 1 ? "text-green-main stylish" : "text-[#000]"}`}
+>>>>>>> 126e597 (Shanged some styles and added certificates)
               >
                 {item}{" "}
               </span>

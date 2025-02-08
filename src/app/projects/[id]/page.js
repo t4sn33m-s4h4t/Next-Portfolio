@@ -8,7 +8,11 @@ const ProjectPage = ({ params }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+<<<<<<< HEAD
         const response = await fetch(`https://tasneem-jet.vercel.app/api/project/get/${params.id}`);
+=======
+        const response = await fetch(`/api/project/get/${params.id}`);
+>>>>>>> 126e597 (Shanged some styles and added certificates)
         const data = await response.json();
         setProject(data.data);
       } catch (error) {
@@ -49,7 +53,11 @@ const ProjectPage = ({ params }) => {
           <img
             src={project.image}
             alt={project.name}
+<<<<<<< HEAD
             className="rounded-lg shadow-xl max-w-full h-auto"
+=======
+            className="rounded-lg shadow max-w-full h-auto"
+>>>>>>> 126e597 (Shanged some styles and added certificates)
           />
         </div>
 

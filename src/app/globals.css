@@ -4,8 +4,14 @@
 @tailwind base;
 @tailwind components;
 
+<<<<<<< HEAD
 html {
   font-family: "Rubik", sans-serif;
+=======
+
+.stylish{
+  font-style: italic;
+>>>>>>> 126e597 (Shanged some styles and added certificates)
 }
 body {
   background: bg-white-500
@@ -162,6 +168,14 @@ circle {
   background-color: rgba(47, 171, 115, 1) !important;
 }
 
+<<<<<<< HEAD
+=======
+@media (min-width: 768px) { 
+  .swiper-slide {
+    height: 70% !important;
+  }
+}
+>>>>>>> 126e597 (Shanged some styles and added certificates)
 
 
 

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Link as LinkScroll } from "react-scroll";
+import { usePathname } from "next/navigation"; // For checking the current path
 import { FaBars, FaTimes } from "react-icons/fa"; // Icons for menu toggle
 
 const menuItems = [
@@ -10,37 +11,49 @@ const menuItems = [
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
   { id: "project", label: "Projects" },
-<<<<<<< HEAD
-=======
   { id: "certificate", label: "Certificates" },
->>>>>>> 126e597 (Shanged some styles and added certificates)
   { id: "contact", label: "Contact" },
 ];
 
 function CreateMenus({ activeLink, setActiveLink, closeMenu }) {
+  const pathname = usePathname(); // Get the current route
+
   return menuItems.map((item) => (
-    <LinkScroll
-      key={item.id}
-      to={item.id}
-      spy={true}
-      smooth={true}
-      duration={1000}
-      onSetActive={() => setActiveLink(item.id)}
-      onClick={closeMenu}
-      className={`px-4 py-2 cursor-pointer block lg:inline-block relative 
-        ${
-          activeLink === item.id
-            ? "text-green-main font-semibold border-b-2 border-green-main"
-            : "text-[#000] font-bold hover:text-green-main transition-all"
-        }
-      `}
-    >
-      {item.label}
-    </LinkScroll>
+    <div key={item.id}>
+      {pathname === "/" ? (
+        // Use react-scroll on the home page
+        <LinkScroll
+          to={item.id}
+          spy={true}
+          smooth={true}
+          duration={1000}
+          onSetActive={() => setActiveLink(item.id)}
+          onClick={closeMenu}
+          className={`px-4 py-2 cursor-pointer block lg:inline-block relative 
+            ${
+              activeLink === item.id
+                ? "text-green-main font-semibold border-b-2 border-green-main"
+                : "text-[#000] font-bold hover:text-green-main transition-all"
+            }
+          `}
+        >
+          {item.label}
+        </LinkScroll>
+      ) : (
+        // Use next/link on other pages
+        <Link
+          href={`/#${item.id}`}
+          className="px-4 py-2 cursor-pointer block lg:inline-block text-[#000] font-bold hover:text-green-main transition-all"
+          onClick={closeMenu}
+        >
+          {item.label}
+        </Link>
+      )}
+    </div>
   ));
 }
 
-export default function Navbar() {
+export default function ProjectNavbar() {
   const [activeLink, setActiveLink] = useState("home");
   const [scrollActive, setScrollActive] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,12 +77,12 @@ export default function Navbar() {
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto flex justify-between items-center py-3 sm:py-4">
           {/* Logo */}
           <Link href="/">
-          <div className="flex items-center font-bold text-[20px] text-green-main cursor-pointer">
-            <div className="w-[40px] h-[40px] flex justify-center items-center p-3 rounded-[8px] bg-green-main">
-              <span className="text-white-500 text-[25px] font-bold">T</span>
+            <div className="flex items-center font-bold text-[20px] text-green-main cursor-pointer">
+              <div className="w-[40px] h-[40px] flex justify-center items-center p-3 rounded-[8px] bg-green-main">
+                <span className="text-white-500 text-[25px] font-bold">T</span>
+              </div>
+              asneem
             </div>
-            asneem
-          </div>
           </Link>
 
           {/* Desktop Menu */}
@@ -79,9 +92,9 @@ export default function Navbar() {
 
           {/* CV Download Button */}
           <div className="hidden lg:block">
-              <button className="py-3 px-6 border-[2px] bg-[#fff] border-green-main text-[#000] font-semibold rounded-lg text-xl tracking-widest hover:shadow-green-md transition-all outline-none">
-                Download CV
-              </button>
+            <button className="py-3 px-6 border-[2px] bg-[#fff] border-green-main text-[#000] font-semibold rounded-lg text-xl tracking-widest hover:shadow-green-md transition-all outline-none">
+              Download CV
+            </button>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -105,13 +118,13 @@ export default function Navbar() {
             setActiveLink={setActiveLink}
             activeLink={activeLink}
             closeMenu={() => setIsMenuOpen(false)}
-          /> 
-            <button
-              className="py-3 px-6 border-[2px] bg-[#fff] border-green-main text-[#000] font-semibold rounded-lg text-xl tracking-widest hover:shadow-green-md transition-all outline-none"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Download CV
-            </button> 
+          />
+          <button
+            className="py-3 px-6 border-[2px] bg-[#fff] border-green-main text-[#000] font-semibold rounded-lg text-xl tracking-widest hover:shadow-green-md transition-all outline-none"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Download CV
+          </button>
         </nav>
       </div>
     </>

@@ -35,3 +35,8 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+<<<<<<< HEAD
+=======
+
+.vercel
+>>>>>>> 126e597 (Shanged some styles and added certificates)

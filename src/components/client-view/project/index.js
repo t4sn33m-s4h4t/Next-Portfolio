@@ -1,12 +1,20 @@
 "use client";
 
 import AnimationWrapper from "../animation-wrapper";
+<<<<<<< HEAD
 import { motion, useScroll } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { FreeMode, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import React, { useRef, useState } from 'react';
+=======
+import { useRouter } from "next/navigation";
+import {  Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import React from 'react';
+>>>>>>> 126e597 (Shanged some styles and added certificates)
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 
@@ -23,7 +31,11 @@ export default function ClientProjectView({ data }) {
         <div className="flex flex-col justify-center items-center">
           <h1 className="leading-[70px] mb-4 text-3xl lg:text-4xl xl:text-5xl font-medium">
             {"My Projects".split(" ").map((item, index) => (
+<<<<<<< HEAD
               <span key={index} className={`${index === 1 ? "text-green-main" : "text-[#000]"}`}>
+=======
+              <span key={index} className={`${index === 1 ? "text-green-main stylish" : "text-[#000]"}`}>
+>>>>>>> 126e597 (Shanged some styles and added certificates)
                 {item}{" "}
               </span>
             ))}
@@ -114,7 +126,11 @@ export default function ClientProjectView({ data }) {
                       {item?._id && (
                         <button
                           onClick={() => router.push(`/projects/${item?._id}`)}
+<<<<<<< HEAD
                           className="p-2 text-white font-semibold  text-[14px] bg-blue-500 rounded-md transition-all"
+=======
+                          className="p-2 text-white hover:underline font-semibold  text-[14px] bg-blue-500 rounded-md transition-all"
+>>>>>>> 126e597 (Shanged some styles and added certificates)
                         >
                           View More
                         </button>
