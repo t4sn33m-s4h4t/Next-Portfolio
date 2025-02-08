@@ -40,7 +40,6 @@ export default function ClientContactView() {
   async function handleSendMessage() {
     setButtonText("Sending...");
     const res = await addData("contact", formData);
-    console.log(res, "contact-res");
 
     if (res && res.success) {
       setFormData(initialFormData); // Clear form data immediately after message is sent
@@ -61,7 +60,6 @@ export default function ClientContactView() {
     return formData && formData.name !== "" && formData.email !== "" && formData.message !== "" ? true : false;
   };
 
-  console.log(isValidForm(), "isValidForm()");
 
   return (
     <div className="max-w-screen-xl pt-20 pb-2 px-6 sm:px-8 lg:px-16 mx-auto" id="contact">

@@ -32,7 +32,6 @@ const skillItemVariant = {
 };
 
 export default function ClientSkillsView({ data }) {
-  console.log(data, "aboutdata");
 
   const setVariants = useMemo(() => variants(), []);
 

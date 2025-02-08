@@ -17,7 +17,6 @@ export async function addData(currentTab, formData) {
 }
 
 export async function getData(currentTab) {
-  console.log("currentTab", currentTab);
   try {
     const response = await fetch(`https://tasneem-jet.vercel.app/api/${currentTab}/get`, {
       method: "GET",

@@ -11,13 +11,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 
 export default function ClientProjectView({ data }) {
- 
-  const router = useRouter(); 
- 
+
+  const router = useRouter();
+
   return (
     <div
       className="max-w-screen-xl pt-20 pb-2 px-6 sm:px-8 lg:px-16 mx-auto"
-      id="project" 
+      id="project"
     >
       <AnimationWrapper className="pt-6 sm:pt-16">
         <div className="flex flex-col justify-center items-center">
@@ -28,29 +28,37 @@ export default function ClientProjectView({ data }) {
               </span>
             ))}
           </h1>
-          
+
         </div>
       </AnimationWrapper>
 
       <AnimationWrapper>
-     
-
-          <Swiper
-           slidesPerView={4}
-           centeredSlides={true}
-           spaceBetween={30}
-           grabCursor={true}
-           pagination={{
-             clickable: true,
-           }}
-           modules={[Pagination]}
-            className="p-4"
-          >
 
 
-            {data && data.length
-              ? data.map((item, index) => (
-                <>
+
+        <Swiper
+          slidesPerView={"auto"}  
+          centeredSlides={true}
+          spaceBetween={30}
+          pagination={{ clickable: true }}
+          modules={[Pagination]}
+          className="p-4 h-[39rem]"
+          breakpoints={{
+            640: {
+              slidesPerView: 2,  
+            },
+            1024: {
+              slidesPerView: 3, 
+            },
+            1280: {
+              slidesPerView: 4, 
+            },
+          }}
+        >
+
+          {data && data.length
+            ? data.map((item, index) => (
+              <>
                 <SwiperSlide className="min-w-[340px] flex items-stretch " key={index}>
                   <div className=" shadow relative max-w-[22rem]   transition-all rounded-lg flex flex-col p-4">
                     {/* Project Image */}
@@ -126,10 +134,10 @@ export default function ClientProjectView({ data }) {
                   </div>
                 </SwiperSlide>
               </>
-              ))
-              : null}
+            ))
+            : null}
 
-          </Swiper>
+        </Swiper>
       </AnimationWrapper>
 
     </div>

@@ -187,12 +187,10 @@ export default function AdminView() {
       experience: experienceViewFormData,
       project: projectViewFormData,
     };
-    console.log(dataMap[currentSelectedTab], "dataMap");
     const response = update
     ? await updateData(currentSelectedTab, dataMap[currentSelectedTab])
     : await addData(currentSelectedTab, dataMap[currentSelectedTab]);
     
-    console.log(response, "response");
 
     if (response.success) {
       resetFormDatas();
@@ -221,7 +219,6 @@ export default function AdminView() {
   async function handleLogin() {
     const res = await login(loginFormData);
 
-    console.log(res, "login");
 
     if (res?.success) {
       setAuthUser(true);

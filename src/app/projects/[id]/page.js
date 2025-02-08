@@ -10,7 +10,6 @@ const ProjectPage = ({ params }) => {
       try {
         const response = await fetch(`https://tasneem-jet.vercel.app/api/project/get/${params.id}`);
         const data = await response.json();
-        console.log(data)
         setProject(data.data);
       } catch (error) {
         console.error('Error fetching project data:', error);
